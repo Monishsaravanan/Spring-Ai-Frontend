@@ -10,7 +10,7 @@ function App() {
   const [activeTab, setActiveTab] = useState("chatbot");
 
   // Spring Boot Backend URL
-  const BASE_URL = "http://localhost:8080";
+  const API_URL = import.meta.env.VITE_API_URL;
 
   // Render Components
   const renderContent = () => {

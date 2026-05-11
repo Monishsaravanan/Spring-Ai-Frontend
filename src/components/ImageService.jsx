@@ -39,7 +39,7 @@ export default function ImageService() {
 
         throw new Error(
           `Backend Error: ${response.status}`
-        );
+            const API_URL = import.meta.env.VITE_API_URL;
       }
 
       // BACKEND RETURNS HTML
@@ -52,9 +52,9 @@ export default function ImageService() {
       const imgRegex =
         /<img[^>]+src=["']([^"']+)["'][^>]*>/g;
 
-      const matches =
-        [...htmlData.matchAll(imgRegex)];
-
+                const response = await fetch(
+                  `${API_URL}/image?prompt=${encodeURIComponent(prompt)}`
+                );
       if (matches.length === 0) {
 
         throw new Error(

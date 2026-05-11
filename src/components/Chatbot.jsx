@@ -12,7 +12,7 @@ export default function Chatbot() {
 
   // BACKEND URL
 
-  const BASE_URL = "http://localhost:8080";
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const scrollToBottom = () => {
 
@@ -58,7 +58,7 @@ export default function Chatbot() {
       // CONNECT TO SPRING BOOT BACKEND
 
       const response = await fetch(
-        `${BASE_URL}/ask-ai?prompt=${encodeURIComponent(currentInput)}`
+        `${API_URL}/ask-ai?prompt=${encodeURIComponent(currentInput)}`
       );
 
       if (!response.ok) {
@@ -88,12 +88,9 @@ export default function Chatbot() {
     } catch (error) {
 
       const errorMessage = {
-
         id: Date.now() + 1,
-
         text:
-          `Error: ${error.message}. Make sure backend is running on http://localhost:8080`,
-
+          `Error: ${error.message}. Make sure backend is running on the correct API URL`,
         sender: "bot",
       };
 
