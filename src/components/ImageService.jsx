@@ -39,7 +39,7 @@ export default function ImageService() {
 
         throw new Error(
           `Backend Error: ${response.status}`
-            const API_URL = import.meta.env.VITE_API_URL;
+        );
       }
 
       // BACKEND RETURNS HTML
