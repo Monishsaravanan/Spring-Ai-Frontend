@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() {
   const [activeTab, setActiveTab] = useState("chatbot");
-  const BASE_URL = import.meta.env.VITE_API_URL;  // ✅ fixed
+  const BASE_URL = import.meta.env.VITE_API_URL;
 
   const renderContent = () => {
     switch (activeTab) {
@@ -25,7 +25,7 @@ function App() {
     <div className="app-container">
       <header className="app-header">
         <div className="header-content">
-          <h1 className="app-title">🤖 Spring AI Assistant</h1>
+          <h1 className="app-title">Spring AI Assistant</h1>
           <p className="app-subtitle">
             Your intelligent companion for chat, images, and recipes
           </p>
@@ -36,21 +36,18 @@ function App() {
           className={`nav-button ${activeTab === "chatbot" ? "active" : ""}`}
           onClick={() => setActiveTab("chatbot")}
         >
-          <span className="nav-icon">💬</span>
           <span>Chatbot</span>
         </button>
         <button
           className={`nav-button ${activeTab === "image" ? "active" : ""}`}
           onClick={() => setActiveTab("image")}
         >
-          <span className="nav-icon">🎨</span>
           <span>Image Service</span>
         </button>
         <button
           className={`nav-button ${activeTab === "recipe" ? "active" : ""}`}
           onClick={() => setActiveTab("recipe")}
         >
-          <span className="nav-icon">👨‍🍳</span>
           <span>Recipe Creator</span>
         </button>
       </nav>
@@ -60,7 +57,7 @@ function App() {
         </div>
       </main>
       <footer className="app-footer">
-        <p>© 2024 Spring AI Frontend. Powered by React & Spring AI.</p>
+        <p>2024 Spring AI Frontend. Powered by React and Spring AI.</p>
       </footer>
     </div>
   );
