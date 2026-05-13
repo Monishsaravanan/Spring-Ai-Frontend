@@ -52,9 +52,8 @@ export default function ImageService() {
       const imgRegex =
         /<img[^>]+src=["']([^"']+)["'][^>]*>/g;
 
-                const response = await fetch(
-                  `${API_URL}/image?prompt=${encodeURIComponent(prompt)}`
-                );
+      const matches = [...htmlData.matchAll(imgRegex)];
+
       if (matches.length === 0) {
 
         throw new Error(
